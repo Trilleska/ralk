@@ -16,8 +16,9 @@ fn main() {
     // the variable. in this case, `operator`.
     let operator = &args[1];
 
+    // return a random number of type u64
     if operator == "r" {
-        println!("rand invoked");
+        println!("{}", rand::random::<u64>());
         std::process::exit(0);
     }
     // omitted &, as var references cannot be converted
